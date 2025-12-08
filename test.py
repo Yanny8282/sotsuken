@@ -1,1 +1,1 @@
-aaaa
+print("fuck")
