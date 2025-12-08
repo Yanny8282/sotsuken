@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>出席登録</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>出席登録</h2>
+
+        <div id="camera-area" style="margin: 20px 0;">
+            <video id="video-stream" width="300" height="225" autoplay></video> 
+            <canvas id="canvas-capture" width="300" height="225" style="display:none;"></canvas>
+            <p id="status-message">カメラを起動し、顔を中央に映してください。</p>
+        </div>
+        
+        <button id="capture-btn">撮影・登録</button>
+        <p id="result-message" style="margin-top: 20px; font-weight: bold;"></p>
+        
+        <br>
+        <button onclick="navigateTo('student_menu.html')">メニューに戻る</button>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/camera.js"></script>
+</body>
+</html>

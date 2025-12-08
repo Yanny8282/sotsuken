@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>出席管理</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>出席管理</h2>
+        <p id="status-message">出席記録を読み込み中...</p>
+        
+        <table id="attendance-table" class="data-table">
+            <thead>
+                <tr>
+                    <th>生徒ID</th>
+                    <th>生徒名</th>
+                    <th>登録日時</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+        
+        <br>
+        <button onclick="navigateTo('admin_menu.html')">メニューに戻る</button>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/admin_attendance.js"></script>
+</body>
+</html>
