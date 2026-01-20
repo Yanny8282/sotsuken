@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>顔登録・変更</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@1.0.0/dist/face-api.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>顔登録・変更 (生徒自身)</h2>
+        <p style="color: red;">※ 現在ログイン中の生徒IDで顔写真を上書き登録します。</p>
+        
+        <form id="face-manage-form">
+            <input type="text" id="face-student-id" placeholder="生徒ID（ログイン情報）" value="S001" disabled>
+            <input type="text" id="face-student-name" placeholder="生徒名（ログイン情報）" value="山田太郎" disabled>
+            
+            <div id="register-camera-area" style="margin: 20px 0;">
+                <video id="reg-video-stream" width="300" height="225" autoplay></video> 
+                <canvas id="reg-canvas-capture" width="300" height="225" style="display:none;"></canvas>
+                <p id="reg-status-message">カメラで顔を中央に合わせ、「撮影・変更」ボタンを押してください。</p>
+            </div>
+            
+            <button type="button" id="reg-capture-btn">顔写真の撮影・変更</button>
+        </form>
+        
+        <p id="result-message" style="margin-top: 20px; font-weight: bold;"></p>
+        
+        <br>
+        <button onclick="navigateTo('student_menu.html')">メニューに戻る</button>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/admin_camera.js"></script>
+</body>
+</html>

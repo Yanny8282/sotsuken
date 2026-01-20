@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "studentId": "S001",
+      "studentName": "山田太郎",
+      "faceRegistered": true
+    },
+    {
+      "studentId": "S002",
+      "studentName": "佐藤花子",
+      "faceRegistered": true
+    },
+    {
+      "studentId": "S003",
+      "studentName": "田中一郎",
+      "faceRegistered": false
+    }
+  ]
+}

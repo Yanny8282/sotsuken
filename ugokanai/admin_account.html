@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アカウント管理</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@1.0.0/dist/face-api.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>アカウント管理 (生徒登録)</h2>
+        
+        <form id="student-register-form">
+            <input type="text" id="reg-student-id" placeholder="生徒ID (例: S004)" required>
+            <input type="text" id="reg-student-name" placeholder="生徒名" required>
+            
+            <div id="register-camera-area" style="margin: 20px 0;">
+                <video id="reg-video-stream" width="300" height="225" autoplay></video> 
+                <canvas id="reg-canvas-capture" width="300" height="225" style="display:none;"></canvas>
+                <p id="reg-status-message">カメラで顔を中央に合わせ、撮影してください。</p>
+            </div>
+            
+            <button type="button" id="reg-capture-btn">顔写真の撮影・登録</button>
+        </form>
+        
+        <p id="result-message" style="margin-top: 20px; font-weight: bold;"></p>
+        
+        <br>
+        <button onclick="navigateTo('admin_menu.html')">メニューに戻る</button>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/admin_camera.js"></script>
+</body>
+</html>
